@@ -21,6 +21,10 @@ class EventCreateView(CreateAPIView):
 
 
 class EventListView(ListAPIView):
+    '''
+        ENDPOINT - /api/events/all
+        Authenticated users can view the list of events
+    '''
     permission_classes = [permissions.IsAuthenticated]
     queryset = Event.objects.all()
     serializer_class = EventSerializer
