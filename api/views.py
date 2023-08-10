@@ -11,6 +11,10 @@ from django.contrib.auth import login, authenticate
 
 
 class EventCreateView(CreateAPIView):
+    '''
+        ENDPOINT - /api/events/create
+        only admin user can able to create events
+    '''
     permission_classes = [permissions.IsAdminUser]
     queryset = Event.objects.all()
     serializer_class = EventSerializer
