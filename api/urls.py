@@ -1,10 +1,7 @@
-from rest_framework.routers import DefaultRouter
-from .views import (EventCreateView, EventListView, 
+from .views import (EventCreateView, EventListView,
                     BookingCreateView, BookingListView,
                     user_registration, user_login)
 from django.urls import path
-
-
 
 
 urlpatterns = [
